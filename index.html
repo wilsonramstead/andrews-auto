@@ -1,0 +1,645 @@
+<!-- DEMO: remove noindex when site goes live -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Andrew's Auto — Auto Repair in New Port Richey, FL</title>
+<meta name="description" content="Andrew's Auto is the word-of-mouth mechanic in New Port Richey, FL. A/C recharge, electrical, diagnostics and honest general repair — one mechanic, start to finish. Call or text (727) 846-0422.">
+
+<!-- Open Graph / social preview -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Andrew's Auto">
+<meta property="og:title" content="Andrew's Auto — The word-of-mouth mechanic in New Port Richey">
+<meta property="og:description" content="A/C recharge, electrical, diagnostics and honest general repair. One mechanic, start to finish. 4.5★ from 119 reviews. Call or text (727) 846-0422.">
+<meta property="og:url" content="https://wilsonramstead.github.io/andrews-auto/">
+<meta property="og:image" content="https://images.unsplash.com/photo-1775590766345-c117265f0c1b?w=1200&q=70&fm=jpg&fit=crop">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Andrew's Auto — The word-of-mouth mechanic in New Port Richey">
+<meta name="twitter:description" content="A/C recharge, electrical, diagnostics and honest general repair. One mechanic, start to finish. Call or text (727) 846-0422.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1775590766345-c117265f0c1b?w=1200&q=70&fm=jpg&fit=crop">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kufam:wght@500;600;700;800&family=Krub:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#2a0e1f;
+    --plum:#7a1f47;
+    --plum-deep:#5c1636;
+    --aqua:#17b3aa;
+    --aqua-deep:#0e7c76;
+    --aqua-soft:#d9f2ef;
+    --cream:#faf3ec;
+    --cream-2:#f2e7dd;
+    --card:#ffffff;
+    --muted:#6a5560;
+    --line:#ecdfe4;
+    --shadow:0 18px 40px -22px rgba(42,14,31,.45);
+    --shadow-sm:0 6px 18px -12px rgba(42,14,31,.4);
+    --radius:18px;
+    --wrap:1140px;
+  }
+
+  *{box-sizing:border-box}
+  html,body{overflow-x:clip}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:"Krub",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    font-weight:400;
+    line-height:1.62;
+    font-size:17px;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  h1,h2,h3,.display{
+    font-family:"Kufam","Krub",Georgia,serif;
+    font-weight:700;
+    line-height:1.08;
+    letter-spacing:-.01em;
+    margin:0;
+  }
+  p{margin:0}
+  a{color:var(--plum);text-decoration:none}
+  img{max-width:100%;display:block}
+
+  .wrap{width:100%;max-width:var(--wrap);margin-inline:auto;padding-inline:22px}
+  .eyebrow{
+    font-family:"Kufam",sans-serif;
+    text-transform:uppercase;
+    letter-spacing:.18em;
+    font-size:.74rem;
+    font-weight:600;
+    color:var(--aqua-deep);
+    margin:0 0 14px;
+  }
+  .section-pad{padding-top:88px;padding-bottom:88px;padding-left:0;padding-right:0}
+
+  /* ---------- buttons ---------- */
+  .btn{
+    display:inline-flex;align-items:center;gap:.55em;
+    font-family:"Kufam",sans-serif;font-weight:600;font-size:1rem;
+    padding-top:.82em;padding-bottom:.82em;padding-left:1.4em;padding-right:1.4em;
+    border-radius:999px;border:2px solid transparent;cursor:pointer;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease, color .15s ease;
+    line-height:1;white-space:nowrap;
+  }
+  .btn svg{width:1.05em;height:1.05em;flex:none}
+  .btn-primary{background:var(--plum);color:#fff;box-shadow:var(--shadow-sm)}
+  .btn-primary:hover{background:var(--plum-deep);transform:translateY(-2px)}
+  .btn-ghost{background:transparent;color:var(--ink);border-color:rgba(42,14,31,.22)}
+  .btn-ghost:hover{border-color:var(--plum);color:var(--plum)}
+  .btn-aqua{background:var(--aqua-deep);color:#fff}
+  .btn-aqua:hover{background:#0b615c;transform:translateY(-2px)}
+  .btn-lg{font-size:1.06rem;padding-top:.95em;padding-bottom:.95em;padding-left:1.7em;padding-right:1.7em}
+  a:focus-visible,.btn:focus-visible{outline:3px solid var(--aqua);outline-offset:3px}
+
+  /* ---------- header ---------- */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(250,243,236,.9);
+    backdrop-filter:saturate(1.4) blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;gap:14px;
+    padding-top:14px;padding-bottom:14px;padding-left:22px;padding-right:22px;
+    max-width:var(--wrap);margin-inline:auto;min-width:0;
+  }
+  .brand{display:flex;align-items:center;gap:11px;min-width:0;text-decoration:none;color:var(--ink)}
+  .brand-mark{
+    width:42px;height:42px;flex:none;border-radius:12px;
+    background:linear-gradient(150deg,var(--plum),var(--plum-deep));
+    display:grid;place-items:center;color:#fff;font-family:"Kufam",sans-serif;font-weight:800;font-size:1.15rem;
+    box-shadow:var(--shadow-sm);
+  }
+  .brand-name{
+    font-family:"Kufam",sans-serif;font-weight:700;font-size:1.22rem;line-height:1.05;letter-spacing:-.01em;
+    color:var(--ink);white-space:nowrap;min-width:0;
+  }
+  .brand-sub{display:block;font-family:"Krub",sans-serif;font-weight:500;font-size:.72rem;letter-spacing:.04em;color:var(--muted);text-transform:uppercase}
+  .nav-cta{display:flex;align-items:center;gap:10px;flex:none}
+  .nav-phone{display:none;font-family:"Kufam",sans-serif;font-weight:600;color:var(--ink)}
+
+  /* ---------- hero ---------- */
+  .hero{background:var(--ink);color:#f7ecef;position:relative;overflow:hidden}
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(120% 90% at 88% 8%, rgba(23,179,170,.20), transparent 55%),
+               radial-gradient(90% 80% at 6% 100%, rgba(122,31,71,.55), transparent 60%);
+    pointer-events:none;
+  }
+  .hero-grid{
+    position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center;
+    padding-top:78px;padding-bottom:78px;
+  }
+  .hero-grid > *{min-width:0}
+  .hero h1{font-size:clamp(2.3rem,5.6vw,3.9rem);color:#fff;font-weight:800}
+  .hero h1 .hl{color:var(--aqua);white-space:nowrap}
+  .hero-lead{margin-top:22px;font-size:1.14rem;color:#e7d4dc;max-width:34ch;font-weight:300}
+  .hero-cta{margin-top:32px;display:flex;flex-wrap:wrap;gap:12px}
+  .hero .btn-ghost{color:#fff;border-color:rgba(255,255,255,.35)}
+  .hero .btn-ghost:hover{border-color:#fff;color:#fff;background:rgba(255,255,255,.08)}
+  .hero-rating{margin-top:30px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  .stars{color:#ffca4a;letter-spacing:2px;font-size:1.05rem;line-height:1}
+  .hero-rating b{color:#fff;font-family:"Kufam",sans-serif}
+  .hero-rating span{color:#cdb6c1;font-size:.95rem}
+
+  .hero-media{position:relative}
+  .hero-media img{
+    width:100%;height:100%;max-height:470px;object-fit:cover;border-radius:22px;
+    box-shadow:0 30px 60px -30px rgba(0,0,0,.7);
+  }
+  .hero-badge{
+    position:absolute;left:-18px;bottom:26px;background:#fff;color:var(--ink);
+    border-radius:16px;padding-top:14px;padding-bottom:14px;padding-left:18px;padding-right:20px;
+    box-shadow:var(--shadow);display:flex;align-items:center;gap:12px;max-width:78%;
+  }
+  .hero-badge .ic{width:40px;height:40px;flex:none;border-radius:11px;background:var(--aqua-soft);display:grid;place-items:center;color:var(--aqua-deep)}
+  .hero-badge .ic svg{width:22px;height:22px}
+  .hero-badge b{font-family:"Kufam",sans-serif;font-size:.98rem;display:block}
+  .hero-badge small{color:var(--muted);font-size:.82rem}
+
+  /* ---------- stat strip ---------- */
+  .stats{background:var(--plum);color:#fff}
+  .stats-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:18px;
+    padding-top:30px;padding-bottom:30px;
+  }
+  .stats-grid > div{min-width:0;text-align:center;padding-inline:6px}
+  .stat-n{font-family:"Kufam",sans-serif;font-weight:800;font-size:1.9rem;line-height:1;color:#fff}
+  .stat-n .st{color:#ffca4a}
+  .stat-l{display:block;margin-top:7px;font-size:.9rem;color:#f0d7e1;font-weight:400}
+
+  /* ---------- section heads ---------- */
+  .head{max-width:640px;margin-bottom:44px}
+  .head.center{margin-inline:auto;text-align:center}
+  .head h2{font-size:clamp(1.9rem,3.8vw,2.75rem)}
+  .head p{margin-top:16px;color:var(--muted);font-size:1.08rem}
+
+  /* ---------- services ---------- */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .cards > *{min-width:0}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding-top:30px;padding-bottom:30px;padding-left:28px;padding-right:28px;
+    box-shadow:var(--shadow-sm);transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .card .ic{
+    width:52px;height:52px;border-radius:14px;display:grid;place-items:center;margin-bottom:18px;
+    background:linear-gradient(150deg,var(--aqua-soft),#eef8f6);color:var(--aqua-deep);
+  }
+  .card .ic svg{width:27px;height:27px}
+  .card h3{font-size:1.24rem;margin-bottom:9px}
+  .card p{color:var(--muted);font-size:.98rem;overflow-wrap:break-word}
+
+  /* ---------- feature bands ---------- */
+  .feature{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
+  .feature.rev .feature-media{order:2}
+  .feature > *{min-width:0}
+  .feature-media img{width:100%;height:100%;max-height:430px;object-fit:cover;border-radius:20px;box-shadow:var(--shadow)}
+  .feature-body .eyebrow{color:var(--aqua-deep)}
+  .feature-body h2{font-size:clamp(1.75rem,3.4vw,2.5rem)}
+  .feature-body p{margin-top:16px;color:var(--muted);font-size:1.06rem}
+  .chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+  .chip{
+    display:inline-flex;align-items:center;gap:.4em;font-size:.86rem;font-weight:500;
+    background:var(--aqua-soft);color:var(--aqua-deep);border-radius:999px;
+    padding-top:.42em;padding-bottom:.42em;padding-left:.9em;padding-right:.9em;
+  }
+  .feature.plum{background:var(--ink);color:#f4e8ee;border-radius:26px}
+  .feature.plum .feature-body h2{color:#fff}
+  .feature.plum .feature-body p{color:#e0ccd6}
+  .feature.plum .eyebrow{color:var(--aqua)}
+  .feature.plum-pad{padding-top:46px;padding-bottom:46px;padding-left:46px;padding-right:46px}
+
+  /* ---------- steps ---------- */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .steps > *{min-width:0}
+  .step{padding-top:6px}
+  .step .num{
+    font-family:"Kufam",sans-serif;font-weight:800;font-size:1.05rem;color:#fff;
+    width:40px;height:40px;border-radius:12px;background:var(--plum);display:grid;place-items:center;margin-bottom:16px;
+  }
+  .step h3{font-size:1.18rem;margin-bottom:8px}
+  .step p{color:var(--muted);font-size:.98rem}
+
+  /* ---------- reviews ---------- */
+  .reviews{background:var(--cream-2)}
+  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .rev-grid > *{min-width:0}
+  .quote{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding-top:28px;padding-bottom:26px;padding-left:26px;padding-right:26px;
+    box-shadow:var(--shadow-sm);display:flex;flex-direction:column;
+  }
+  .quote .stars{color:#f2a922;font-size:1rem;margin-bottom:14px}
+  .quote p{font-size:1.02rem;color:var(--ink);overflow-wrap:break-word}
+  .quote .by{margin-top:18px;display:flex;align-items:center;gap:12px}
+  .avatar{
+    width:44px;height:44px;flex:none;border-radius:50%;display:grid;place-items:center;
+    background:linear-gradient(150deg,var(--plum),var(--plum-deep));color:#fff;
+    font-family:"Kufam",sans-serif;font-weight:700;font-size:1rem;
+  }
+  .by b{font-family:"Kufam",sans-serif;font-size:.98rem;display:block}
+  .by small{color:var(--muted);font-size:.82rem}
+
+  /* ---------- location / cta ---------- */
+  .contact{background:var(--ink);color:#f4e8ee}
+  .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+  .contact-grid > *{min-width:0}
+  .contact h2{color:#fff;font-size:clamp(1.9rem,3.8vw,2.7rem)}
+  .contact .lead{margin-top:16px;color:#e0ccd6;font-size:1.08rem;max-width:42ch}
+  .contact-cta{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
+  .contact .btn-ghost{color:#fff;border-color:rgba(255,255,255,.4)}
+  .contact .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+  .infocard{
+    background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:20px;
+    padding-top:28px;padding-bottom:28px;padding-left:28px;padding-right:28px;
+  }
+  .info-row{display:flex;gap:14px;align-items:flex-start;padding-top:16px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .info-row:last-child{border-bottom:0;padding-bottom:0}
+  .info-row:first-child{padding-top:0}
+  .info-row .ic{width:38px;height:38px;flex:none;border-radius:11px;background:rgba(23,179,170,.18);display:grid;place-items:center;color:var(--aqua)}
+  .info-row .ic svg{width:20px;height:20px}
+  .info-row .lbl{font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;color:#bfa6b2}
+  .info-row .val{font-family:"Kufam",sans-serif;font-size:1.05rem;color:#fff;margin-top:2px;overflow-wrap:break-word}
+  .info-row a.val{color:#fff}
+  .info-row a.val:hover{color:var(--aqua)}
+
+  /* ---------- footer ---------- */
+  footer.site{background:#210a18;color:#c9b2bd;padding-top:44px;padding-bottom:44px}
+  .foot-grid{display:flex;flex-wrap:wrap;gap:26px;justify-content:space-between;align-items:flex-start}
+  .foot-brand{display:flex;align-items:center;gap:12px}
+  .foot-brand .brand-name{color:#fff}
+  .foot-links{display:flex;flex-wrap:wrap;gap:22px;font-size:.95rem}
+  .foot-links a{color:#d9c3ce}
+  .foot-links a:hover{color:#fff}
+  .foot-bottom{
+    margin-top:30px;padding-top:22px;border-top:1px solid rgba(255,255,255,.1);
+    display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;font-size:.86rem;color:#a58c98;
+  }
+  .foot-bottom a{color:#e7d4dc;font-weight:500}
+  .foot-bottom a:hover{color:#fff}
+
+  /* ---------- reveal ---------- */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    html{scroll-behavior:auto}
+  }
+
+  /* ---------- responsive ---------- */
+  @media (max-width:900px){
+    .hero-grid{grid-template-columns:1fr;gap:38px;padding-top:56px;padding-bottom:64px}
+    .hero-media{order:-1}
+    .hero-media img{max-height:340px}
+    .feature{grid-template-columns:1fr;gap:30px}
+    .feature.rev .feature-media{order:0}
+    .contact-grid{grid-template-columns:1fr;gap:32px}
+    .cards,.rev-grid,.steps{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:640px){
+    body{font-size:16px}
+    .section-pad{padding-top:60px;padding-bottom:60px}
+    .stats-grid{grid-template-columns:1fr 1fr;gap:22px}
+    .cards,.rev-grid,.steps{grid-template-columns:1fr}
+    .nav-phone{display:none}
+    .brand-name{white-space:normal;font-size:.98rem;line-height:1.2;max-width:11em}
+    .hero-badge{left:0}
+    .feature.plum-pad{padding-top:30px;padding-bottom:30px;padding-left:24px;padding-right:24px}
+    .btn{font-size:.95rem}
+  }
+  @media (min-width:1010px){ .nav-phone{display:inline} }
+</style>
+
+<header class="site">
+  <div class="nav">
+    <a class="brand" href="#top" aria-label="Andrew's Auto home">
+      <span class="brand-mark" aria-hidden="true">A</span>
+      <span class="brand-name">Andrew's Auto<span class="brand-sub">Auto Repair · New Port Richey</span></span>
+    </a>
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:+17278460422">(727) 846-0422</a>
+      <a class="btn btn-ghost" href="sms:+17278460422" aria-label="Text Andrew's Auto">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Text
+      </a>
+      <a class="btn btn-primary" href="tel:+17278460422" aria-label="Call Andrew's Auto at (727) 846-0422">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">The word-of-mouth mechanic · New Port Richey, FL</p>
+        <h1>You heard about Andrew from a friend. <span class="hl">Here's why.</span></h1>
+        <p class="hero-lead">Honest repairs, fair prices and straight answers — the kind that make people tell everyone they know. One mechanic, your car, start to finish.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary btn-lg" href="tel:+17278460422">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call (727) 846-0422
+          </a>
+          <a class="btn btn-ghost btn-lg" href="sms:+17278460422">Text us</a>
+        </div>
+        <div class="hero-rating">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <b>4.5</b>
+          <span>from 119 Google reviews</span>
+        </div>
+      </div>
+      <div class="hero-media reveal">
+        <img src="https://images.unsplash.com/photo-1775590766345-c117265f0c1b?w=1100&q=70&fm=jpg&fit=crop" width="1100" height="733" alt="Mechanic's hands working a ratchet on the engine bay of a blue car with the hood raised">
+        <div class="hero-badge">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span><b>Fair price, no surprises</b><small>Diagnosed straight, fixed right</small></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats" aria-label="Andrew's Auto at a glance">
+    <div class="wrap stats-grid">
+      <div class="reveal"><span class="stat-n">4.5<span class="st"> ★</span></span><span class="stat-l">Google rating</span></div>
+      <div class="reveal"><span class="stat-n">119</span><span class="stat-l">Customer reviews</span></div>
+      <div class="reveal"><span class="stat-n">1</span><span class="stat-l">Mechanic, start to finish</span></div>
+      <div class="reveal"><span class="stat-n">&lt;45<span class="st"> min</span></span><span class="stat-l">Typical A/C recharge</span></div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section-pad" id="services">
+    <div class="wrap">
+      <div class="head center reveal">
+        <p class="eyebrow">What we fix</p>
+        <h2>Real repair, done right the first time</h2>
+        <p>From a summer A/C recharge to electrical gremlins and everything under the hood — one mechanic who explains what's actually wrong and what it'll cost.</p>
+      </div>
+      <div class="cards">
+        <div class="card reveal">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.5 4.5v15M14.5 4.5v15M4 9h16M4 15h16" opacity=".55"/><circle cx="12" cy="12" r="9"/></svg></span>
+          <h3>A/C service &amp; recharge</h3>
+          <p>Blowing warm in the Florida heat? A/C recharge, cabin filter and system checks to get you riding cool again — often the same visit.</p>
+        </div>
+        <div class="card reveal">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 4.5 13.5H11l-1 8L19.5 10H13z"/></svg></span>
+          <h3>Electrical &amp; charging</h3>
+          <p>Alternators, batteries and computer modules diagnosed and replaced — so a dead-battery morning doesn't turn into a guessing game.</p>
+        </div>
+        <div class="card reveal">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l2-6 4 12 2-6h6"/></svg></span>
+          <h3>Computer diagnostics</h3>
+          <p>Check-engine light on? A real diagnosis instead of a parts-swap lottery — you'll know what's wrong before anything gets replaced.</p>
+        </div>
+        <div class="card reveal">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 4v3M12 17v3M4 12h3M17 12h3"/></svg></span>
+          <h3>Brakes &amp; suspension</h3>
+          <p>Pads, rotors, noises and pulling — the safety work that keeps your family's car planted on the road, checked honestly.</p>
+        </div>
+        <div class="card reveal">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 14a4 4 0 0 0 4 4h8a4 4 0 0 0 .5-7.97A6 6 0 0 0 5 9.5 4 4 0 0 0 4 14z"/><path d="M12 8v4l2 1"/></svg></span>
+          <h3>Fluids &amp; maintenance</h3>
+          <p>Oil, coolant and the small stuff — fluids and tire pressures checked while you're in, so little problems stay little.</p>
+        </div>
+        <div class="card reveal">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4l-6 6 2 2 6-6a4 4 0 0 0 5.4-5.4l-2.3 2.3-2-2z"/></svg></span>
+          <h3>General repair</h3>
+          <p>Belts, hoses, sensors, the noise you can't explain — bring it in, get a straight answer and a fair price to make it right.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- A/C FEATURE BAND -->
+  <section class="section-pad" style="padding-top:0" id="ac">
+    <div class="wrap">
+      <div class="feature plum plum-pad reveal">
+        <div class="feature-media">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1757604564348-1172f76b7fa0?w=900&q=70&fm=jpg&fit=crop" width="900" height="900" alt="Close-up of a car dashboard air-conditioning vent with a chrome trim ring">
+        </div>
+        <div class="feature-body">
+          <p class="eyebrow">Riding cool again</p>
+          <h2>Beat the Florida heat in one quick visit</h2>
+          <p>When the A/C quits, summer here is brutal. Most recharges — plus a fresh cabin filter — are done in under 45 minutes, so you're back on the road with cold air the same afternoon.</p>
+          <div class="chips">
+            <span class="chip">A/C recharge</span>
+            <span class="chip">Cabin filter</span>
+            <span class="chip">System leak check</span>
+            <span class="chip">Fast turnaround</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIAGNOSTICS FEATURE BAND -->
+  <section class="section-pad" style="padding-top:0" id="honest">
+    <div class="wrap">
+      <div class="feature rev reveal">
+        <div class="feature-media">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1653491887161-aaf72d4514f3?w=900&q=70&fm=jpg&fit=crop" width="900" height="560" alt="Close-up of an engine bay showing wiring, hoses and mechanical components">
+        </div>
+        <div class="feature-body">
+          <p class="eyebrow">Straight answers</p>
+          <h2>The problem another shop couldn't explain</h2>
+          <p>Been somewhere that left you with a mess and a big estimate? Bring it here. Years of hands-on experience means the real issue usually turns up fast — and the fix tends to cost far less than you were bracing for.</p>
+          <p style="margin-top:12px;color:var(--muted)">The same hands do the work start to finish, from the first look to handing back your keys — so nothing gets lost in translation between a service desk and the shop floor.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section-pad" style="padding-top:0" id="how">
+    <div class="wrap">
+      <div class="head center reveal">
+        <p class="eyebrow">How it works</p>
+        <h2>Simple, honest, no runaround</h2>
+      </div>
+      <div class="steps">
+        <div class="step reveal">
+          <span class="num" aria-hidden="true">1</span>
+          <h3>Call or text</h3>
+          <p>Tell us what's going on — the noise, the light, the smell. We'll talk it through and set up a time that works.</p>
+        </div>
+        <div class="step reveal">
+          <span class="num" aria-hidden="true">2</span>
+          <h3>Straight diagnosis</h3>
+          <p>We find the actual problem and explain it in plain English, with a fair price up front. No surprise add-ons.</p>
+        </div>
+        <div class="step reveal">
+          <span class="num" aria-hidden="true">3</span>
+          <h3>Fixed &amp; on your way</h3>
+          <p>The work gets done right, your fluids and tires get a look, and you leave with a car you trust — and a shop you'll recommend.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section-pad reviews" id="reviews">
+    <div class="wrap">
+      <div class="head center reveal">
+        <p class="eyebrow">From the neighborhood</p>
+        <h2>4.5 stars, 119 reviews, one common thread</h2>
+        <p>Customers come because a friend sent them — and leave telling everyone they know.</p>
+      </div>
+      <div class="rev-grid">
+        <figure class="quote reveal">
+          <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+          <p>"A friend told me to go see Andrew and I'm so glad I did. He had my A/C recharged and a new cabin filter in about 45 minutes — I was riding cool again the same afternoon. Andrew is a gem."</p>
+          <figcaption class="by">
+            <span class="avatar" aria-hidden="true">SG</span>
+            <span><b>Stacey Gansert</b><small>Google review · 5★</small></span>
+          </figcaption>
+        </figure>
+        <figure class="quote reveal">
+          <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+          <p>"I came in after a shady dealership left me with a problem. He knew almost immediately what they'd done — and the fix cost far less than I was expecting. Honest, fast, and he actually explained it."</p>
+          <figcaption class="by">
+            <span class="avatar" aria-hidden="true">CF</span>
+            <span><b>Calvin Flemming</b><small>Google review · 5★</small></span>
+          </figcaption>
+        </figure>
+        <figure class="quote reveal">
+          <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+          <p>"Needed an alternator, battery and a computer module. Fair price on all of it, and he checked my fluids and tire pressures too without me even asking. This is my mechanic now."</p>
+          <figcaption class="by">
+            <span class="avatar" aria-hidden="true">RB</span>
+            <span><b>Robert Bennett</b><small>Google review · 5★</small></span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / LOCATION -->
+  <section class="section-pad contact" id="contact">
+    <div class="wrap contact-grid">
+      <div class="reveal">
+        <p class="eyebrow" style="color:var(--aqua)">Get in touch</p>
+        <h2>Ready when your car isn't</h2>
+        <p class="lead">Call or send a text and tell us what's going on. You'll get a straight answer and a fair price — the same reason your friend sent you here.</p>
+        <div class="contact-cta">
+          <a class="btn btn-aqua btn-lg" href="tel:+17278460422">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call (727) 846-0422
+          </a>
+          <a class="btn btn-ghost btn-lg" href="sms:+17278460422">Text us</a>
+        </div>
+      </div>
+      <div class="infocard reveal">
+        <div class="info-row">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <div>
+            <span class="lbl">Shop location</span>
+            <a class="val" href="https://www.google.com/maps/search/?api=1&query=7944%20Rutillio%20Ct%2C%20New%20Port%20Richey%2C%20FL%2034653" target="_blank" rel="noopener">7944 Rutillio Ct<br>New Port Richey, FL 34653</a>
+          </div>
+        </div>
+        <div class="info-row">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+          <div>
+            <span class="lbl">Call</span>
+            <a class="val" href="tel:+17278460422">(727) 846-0422</a>
+          </div>
+        </div>
+        <div class="info-row">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+          <div>
+            <span class="lbl">Text</span>
+            <a class="val" href="sms:+17278460422">(727) 846-0422</a>
+          </div>
+        </div>
+        <div class="info-row">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 2 2.9 6.3 6.8.8-5 4.6 1.3 6.8L12 17.8 5.9 20.5 7.3 13.7l-5-4.6 6.8-.8z"/></svg></span>
+          <div>
+            <span class="lbl">Reputation</span>
+            <span class="val">4.5 ★ · 119 Google reviews</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <span class="brand-mark" aria-hidden="true">A</span>
+        <span class="brand-name">Andrew's Auto<span class="brand-sub">Auto Repair · New Port Richey, FL</span></span>
+      </div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="#services">Services</a>
+        <a href="#ac">A/C</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+        <a href="tel:+17278460422">Call</a>
+        <a href="sms:+17278460422">Text</a>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr">2026</span> Andrew's Auto · 7944 Rutillio Ct, New Port Richey, FL 34653</span>
+      <span>Website by <a href="https://wilsoninnovations.net" target="_blank" rel="noopener">Wilson Innovations</a></span>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"AutoRepair",
+  "name":"Andrew's Auto",
+  "image":"https://images.unsplash.com/photo-1775590766345-c117265f0c1b?w=1200&q=70&fm=jpg&fit=crop",
+  "url":"https://wilsonramstead.github.io/andrews-auto/",
+  "telephone":"+17278460422",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"7944 Rutillio Ct",
+    "addressLocality":"New Port Richey",
+    "addressRegion":"FL",
+    "postalCode":"34653",
+    "addressCountry":"US"
+  },
+  "areaServed":"New Port Richey, FL",
+  "aggregateRating":{
+    "@type":"AggregateRating",
+    "ratingValue":"4.5",
+    "reviewCount":"119"
+  },
+  "review":[
+    {"@type":"Review","author":{"@type":"Person","name":"Stacey Gansert"},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"reviewBody":"A friend told me to go see Andrew and I'm so glad I did. A/C recharged and a new cabin filter in about 45 minutes — riding cool again the same afternoon. Andrew is a gem."},
+    {"@type":"Review","author":{"@type":"Person","name":"Calvin Flemming"},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"reviewBody":"Came in after a shady dealership left me with a problem. He knew almost immediately what they'd done, and the fix cost far less than I expected."},
+    {"@type":"Review","author":{"@type":"Person","name":"Robert Bennett"},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"reviewBody":"Alternator, battery and computer module all at a fair price — and he checked my fluids and tire pressures too without me asking."}
+  ]
+}
+</script>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      els.forEach(function(e){e.classList.add('in')});
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}
+      });
+    },{threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(e){io.observe(e)});
+  })();
+</script>
